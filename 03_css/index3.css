@@ -1,0 +1,84 @@
+body {
+  font-family: 'Bungee Spice', cursive;
+  font-family: 'Jua', sans-serif; 
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+
+}
+
+div {
+  color:royalblue;
+  /* background-color: pink; */
+  background: linear-gradient(90deg, yellow,pink);
+
+  /* 
+  1px : 1/96인치 -> 절대단위 
+  font-weight : 폰트 굵기(100~900)
+  font-family : 글씨체 monospace 코딩할때 가독성 위해 많이 사용
+                여러개 설정시 선언된 순서로 적용함
+                영어, 한글 글꼴 다르게 - 한글 없는 폰트 먼저 -> 한글 폰트
+                웹 폰트(모든 사용자가 동일한 폰트로 화면 볼 수 있음
+                Google font - link로 가져와서 첨부
+  font-style : 글자 모양
+  border style wlwjdgodi -> width,color 의미 있음
+  
+  */
+  font-size: 30px;
+  /* font-weight: bold; */
+  /* font-style: oblique; */
+
+  width: 400px;
+  /* height: 100px; */
+  /* height: 200px; */
+
+  border-style: solid;
+  border-width: 10px;
+  border-color: limegreen;
+
+  /* height, width 크기 같게하고 border-radius:50%하면 원 만들어짐*/
+  /* border-radius: 5px 30px 20px 20px; */
+
+  /* border : width, style, color 한 번에 설정 가능 */
+  border: 10px solid green;
+  border-top: 10px solid red;
+
+  /*
+   박스 모델 
+   요소의 너비와 높이를 계산하는 방식 지정
+   content > padding > border > margin
+   box-sizing : content box;
+   */
+  box-sizing: border-box;
+
+  /* 
+  margin, padding` 
+  */
+  padding: 20px;
+  margin: 50px 30px;
+
+
+}
+
+p {
+  font-size: 50px;
+  font-weight: 700;
+  border: 1px solid black;
+  width: 400px;
+
+  /* 그림자 효과 box-shadow text-shadow*/
+  box-shadow: 10px 10px 10px rgba(54, 7, 7, 0.4);
+  text-shadow: 10px 10px 10px rgba(63, 15, 157, 0.4);
+
+}
+
+span {
+  border: 10px dotted royalblue ;
+  border-radius: 50%;
+}
+
+.test {
+  font-size: 30px;
+  color: gray;
+}

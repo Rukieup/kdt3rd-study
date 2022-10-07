@@ -1,0 +1,17 @@
+.red {
+  color: red;;
+}
+
+.blue {
+  color:blue;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+}
+
+table,
+td {
+  border: 3px solid #333;
+}

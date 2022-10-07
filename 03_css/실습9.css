@@ -1,0 +1,44 @@
+*{
+  background-color: #bbb;
+}
+
+/* color 
+- rgb(r,g,b) 0~255
+- rgba(r,g,b,a) a: 0~1
+
+#xxxxxx
+#xxxxxx99(투명도)
+*/
+
+img {
+  width: 500px;
+  height: 300px;
+/* 기준
+- 조상 relative 없으면 -> body 기준
+- 조상 relative 있으면 -> 해당 요소 기준
+- relateive > absolute > position 값 (통일)
+ */
+  position: absolute;  
+  transform: skewY(15deg);
+}
+
+.img1 {
+  /* transform: skewY(15deg); */
+  top:200px;
+  left:100px;
+  z-index: 8;
+}
+
+.img2 {
+  /* transform: skewY(15deg); */
+  top:150px;
+  left:300px;
+  z-index: 7;
+}
+
+.img3 {
+  /* transform: skewY(15deg); */
+  top:100px;
+  left:500px;
+  z-index: 6;
+}

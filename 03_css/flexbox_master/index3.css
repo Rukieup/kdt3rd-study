@@ -1,0 +1,62 @@
+/* common */
+* {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    /* 
+        vh? 처음 보는 단위가 등장했습니다!
+        - vh: viewport height의 약자로 브라우저 1vh는 브라우저 뷰포트 높이의 1/100을 의미해요.
+        - 즉, 100vh는 브라우저 뷰포트 높이와 같아요. body 태그의 높이를 브라우저 뷰포트의 높이와 같게 설정했어요!
+        - 반응형 웹에 대해 학습하실 때 배우게 될 단위입니다 :)
+    */
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, p {
+    margin: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+/* TODO: Slack에서 실행영상을 참고해 제작해주세요~ */
+
+section {
+    display: flex;
+    width: 700px;
+    position: absolute;
+    top : 300px;
+    left : 300px;
+}
+
+article {
+    /* display: flex;
+    justify-content: space-between; */
+    background-color: white;
+}
+
+article:hover {
+    transition: transform 1s;
+    transform: translateY(-50px);
+}
+
+arti
