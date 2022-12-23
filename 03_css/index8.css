@@ -1,0 +1,44 @@
+div {
+  width: 400px;
+  height: 200px;
+  background-color: gold;
+
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+
+img:hover {
+  /* transition: 
+    - css 프로퍼티(속성)이 변화할 때 일정 시간동안 변화가 일어나도록
+  */
+  transition: transform 1s;
+  
+  /* skew() */
+  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
+  
+  /* scale() : 크기 조정(확대, 축소를 의미)
+    - x > 1: 확대
+    - 0 ~ 1 : 축소
+  */
+
+  transform: scale(2, 0.5);
+
+
+  /* rotate() : 각도만큼 회전 
+    - rotateX(): x 축을 기준 회전
+    - rotateY(): y 축을 기준 회전
+  */
+
+  /* transform: rotateX(45deg);
+  transform: rotateY(45deg); */
+
+  /* translate() : 이동 
+   - translateX() : X축을 기준으로 이동
+   - translateY() : Y축을 기준으로 이동
+   - translate() : X, Y축을 기준으로 이동
+  */
+
+  transform: translate(-100px);
+}

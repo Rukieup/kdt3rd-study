@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>  
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <form action="/result" method="post" enctype="multipart/form-data">
+    <!-- name을 써줘야 서버 측에서 확인 가능 -->
+   <input type="text" placeholder="아이디" name="userId"> <br> 
+   <input type="password" placeholder="비밀번호" name="userPw"> <br>
+   <input type="text" placeholder="이름" name="userName"> <br>
+   <input type="number" placeholder="나이" name="userAge"> <br>
+   <input type="file" placeholder="파일 선택" name="profile"> <br><br>
+   <button type="submit">회원가입</button> 
+  </form>
+
+</body>
+</html>

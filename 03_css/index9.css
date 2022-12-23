@@ -1,0 +1,79 @@
+body {
+  padding-bottom: 500px;
+}
+
+.d-inline1 {
+  display: inline;
+  background-color: red;
+}
+.d-inline2 {
+  display: inline;
+  background-color:blue;
+}
+
+.d-block1 {
+  display: block;
+  background-color: red;
+  width: 1200px;
+  height: 200px;
+  padding: 10px 30px;
+
+}
+
+.d-block2 {
+  display: block;
+  background-color: blue;
+}
+
+.d-inline-block1 {
+  display: inline-block;
+  background-color:red;
+}
+
+.d-inline-block2 {
+  display: inline-block;
+  background-color:blue;
+
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.d-none {
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.practice1,
+.practice2,
+.practice3,
+.practice4,
+.practice5 {
+
+  display: inline-block;
+  width: 150px;
+  height: 300px;
+  margin: 0;
+}
+
+.practice1{
+  background-color: red;
+}
+
+.practice2{
+  background-color: orange;
+}
+
+.practice3{
+  background-color: yellow;
+}
+
+.practice4{
+  background-color:green;
+}
+
+.practice5{
+  background-color: blue;
+}

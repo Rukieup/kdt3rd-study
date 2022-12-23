@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <!-- jquery cdn (for AJAX)-->
+   <script
+   src="https://code.jquery.com/jquery-3.6.1.min.js"
+   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+   crossorigin="anonymous"
+  ></script>
+
+  <!-- axios cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <title>Document</title>
+
+  <style>
+    p {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <% title %>
+
+  <h1>실습29. axios get 회원가입</h1>
+  
+  <form name="register">
+    <label for="name">이름</label>
+    <input type="text" id="name" name="name" >
+
+    <fieldset>
+      <legend>성별</legend>
+      <input type="radio" value="male" >남자
+      <input type="radio" value="female" name="gender">여자
+    </fieldset>
+
+    <br>
+    <fieldset>
+      <legend>생년월일</legend>
+
+      <select name="birthYear" id="birthYear">
+        <% for(let i = 1920; i <= 2022; i++){ %>
+          <option value="<%= i %> "> <%= i %> </option>
+        <%  } %>
+      </select>
+      <label for="birthYear">년</label>
+
+      <select name="birthMonth" id="birthMonth">
+        <% for(let i = 1; i <= 12; i++){ %>
+          <option value="<%= i %> "> <%= i %> </option>
+        <%  } %>
+      </select>
+      <label for="birthYear">월</label>
+
+      <select name="birthDate" id="birthDate">
+        <% for(let i = 1; i <= 31; i++){ %>
+          <option value="<%= i %> "> <%= i %> </option>
+        <%  } %>
+      </select>
+      <label for="birthYear">일</label>
+    </fieldset>
+    
+    <br>
+    <fieldset>
+      <legend>관심사</legend>
+      <input type="checkbox" name="travel" id="travel" >
+      <label for="travel">여행</label>
+      <input type="checkbox" name="fashion" id="fashion">
+      <label for="fashion">패션</label>
+      <input type="checkbox" name="food" id="food">
+      <label for="food">음식</label>
+    </fieldset>
+    
+    <br>
+    <button type="button" onclick="axiosGet();">회원가입</button>
+  </form> 
+  <div class="result"></div>
+
+
+  <h1>실습30. axios post 로그인</h1>
+  <p>아이디는 apple이고, 비밀번호는 1111입니다.</p>
+  <form name="register2">
+    <label for="id">아이디</label>
+    <input type="text" id="name" name="id" >
+
+    <label for="pw">비밀번호</label>
+    <input type="password" id="pw" name="pw" >
+
+    <button type="button" onclick="axiosPost();">로그인</button>
+  </form>
+  <div class="result2"></div>
+
+  <script>
+    const resultBox = document.querySelector('.result')
+
+    function axiosGet () {
+      console.log('##### click axiosGet ######')
+      
+      const form = document.forms['register'];
+      console.log(form.name.value)
+      const data = {
+        name: form.name.value
+      }
+
+      axios({
+        method: 'GET',
+        url: '/axios',
+        params: data,
+      }).then(function (response) {
+        resultBox.textContent = `${data.name}님 환영합니다! 가입이 완료되었습니다. 🎉`
+        resultBox.style.color = 'blue';
+      })
+    }
+
+    const resultBox2 = document.querySelector('.result2')
+    function axiosPost () {
+      console.log('##### click axiosPost ######')
+
+      const form = document.forms['register2'];
+      const data = {
+        id: form.id.value,
+        pw: form.pw.value
+      }
+      
+      axios({
+        method: 'POST',
+        url: '/axios',
+        data: data,
+      }).then(function (response) {
+        console.log(response.data)
+        if(response.data.id == userId && response.data.pw == pw) {
+          resultBox2.textContent = `${response.data.id}님! 로그인 성공😁`;
+        } else {
+          resultBox2.textContent = `아이디 또는 패스워드 오류😥`
+        }
+      })
+      resultBox2.style.color = 'blue';
+    }
+    
+    const userId = 'apple';
+    const pw = 1111;
+
+  </script>
+</body>
+</html>

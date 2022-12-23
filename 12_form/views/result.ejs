@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <div><span><%= userInfo.id %></span> 님 환영합니다</div>
+  <div>비밀번호는 <span><%= userInfo.id %></span>이군요!!</div>
+  
+  <br>
+  <br>
+  <a href="/">홈으로 이동하기</a> -->
+
+  <h2>폼 전송 완료!</h2>
+  <ul>
+    <li>이름: <%= userInfo.name %> </li>
+    <li>성별: <%= userInfo.gender %> </li>
+    <li>생일: <%= userInfo.birthYear %> - <%= userInfo.birthMonth %> - <%= userInfo.birthDate %> </li>
+    <li>취미: <%= userInfo.hobby %> </li>
+  </ul>
+
+  <br>
+  <br>
+  <a href="/">홈으로 이동</a>
+
+  <ul>
+    <li>이름: <%= userInfo.name %> </li>
+    <li>성별: <%= userInfo.gender %> </li>
+    <li>생일: <%= userInfo.birthYear %> - <%= userInfo.birthMonth %> - <%= userInfo.birthDate %> </li>
+    <li>취미: <%= userInfo.hobby %> </li>
+    <li>좋아하는 색깔:  <%= userInfo.color %></li>
+    <c:\Users\mph04\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.htmlli>좋아하는 숫자:  <%= userInfo.number %></li>
+  </ul>
+</body>
+</html>

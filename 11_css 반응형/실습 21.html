@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>실습21</title>
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="./normalize.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./실습21.css" />
+  </head>
+  <body>
+    
+    <div class="mainDiv">
+      <div class="icon-menu"></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <script>
+      // - [ ] 아이콘 클릭시 메뉴 열리기
+      // .icon-menu 클릭했을 때 .toggle-menu 요소에 .d-none 클래스 넣었다 뻈다 하기
+
+      const iconMenu = document.querySelector('.icon-menu');
+      const toggleMenu = document.querySelector('.toggle-menu');
+
+      iconMenu.addEventListener('click', function (){
+        toggleMenu.classList.toggle('d-none')
+      })
+
+
+    </script>
+  </body>
+</html>

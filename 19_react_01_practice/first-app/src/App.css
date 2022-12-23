@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+div {
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.div1 {
+  background-color: rgb(16, 136, 233);
+  top:120px;
+  left: 90px;
+  z-index: 8;
+}
+
+.div2 {
+  background-color: blue;
+  top:160px;
+  left: 140px;
+  z-index: 8;
+}
+
+.div3 {
+  background-color: navy;
+  top:200px;
+  left: 200px;
+  z-index: 8;
+}
+
+.div4 {
+  background-color: skyblue;
+  top:230px;
+  left: 250px;
+  z-index: 8;
+}
+
+.div5 {
+  background-color: rgb(30, 121, 119);
+  top:250px;
+  left: 300px;
+  z-index: 10;
+}
+
+img {
+  position: absolute;
+  top:235px;
+  z-index: 8;
+}
+
+.eye1 {
+  background-color: rgb(248, 248, 240);
+  width: 40px;
+  height: 40px;
+  top: 130px;
+  left: 120px;
+  z-index: 8;
+}
+
+.eye2 {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  top: 135px;
+  left: 120px;
+  z-index: 8;
+}

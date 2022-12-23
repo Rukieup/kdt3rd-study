@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #1d1d1d;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 30px 10px;
+        text-align: center;
+      }
+</style>
+<body>
+  <div class="card">
+    <img src="<%= imgSrc %>" width="200" />
+    <h3><%= userInfo.userId %>님 환영합니다!!</h3>
+    <ul>
+      <li>비밀번호: <%= userInfo.userPw %></li>
+      <li>이름: <%= userInfo.userName %></li>
+      <li>나이: <%= userInfo.userAge %></li>
+    </ul>
+
+</body>
+</html>

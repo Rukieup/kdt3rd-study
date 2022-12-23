@@ -1,0 +1,160 @@
+/* 단일 선택자 
+전체 *
+태그 태그명
+클래스 .클래스명
+아이디 #아이디명
+*/
+
+/*
+* {
+  color: orange;
+}
+
+li {
+  color: #ff0000;
+}
+
+.orange {
+  color:rgb(55, 219, 194);
+}
+
+div.orange {
+  color: brown;
+}
+
+#orange {
+  color: black;
+}
+
+ul,
+p,
+.orange {
+  color: green;
+}
+
+*/
+
+/* 공백이 있으면 자식 요소
+div .orange
+
+공백이 없으면 둘 다 갖고 있는 요소
+div.orange */
+
+/* 복합 형제 선택자 
+- 하위 : A B
+- 자식 : A > B
+- 인접 형제 : A + B
+- 일반 형제 : A ~ B
+*/
+
+div .orange{
+  color:orange;
+}
+
+ul > .orange{
+  color: red;
+}
+
+/* 인접 형제 선택자
+1. 탭 횟수가 같으면 같은 레벨
+2. B가 A의 바로 뒤에 있어야 함 */
+
+ul + .orange {
+  color:green;
+}
+
+/* 일반 형제 선택자
+1. 같은 레벨에 있어야 함
+2. B는 A보다 뒤에 위치 */
+
+div.orange ~ span{
+  color: royalblue;
+}
+
+div.orange ~ ul {
+  color: white;
+}
+
+/* 
+가상 선택자
+
+- E:hover : E 요소에 마우스가 올라가 있는 동안
+- E:active : E 요소에 마우스를 클릭하는 동안
+- E:visited : E 요소가 링크일 때, 한 번 클릭해서 링크를 접속한 이력이 있을 때
+
+*/
+
+#google:hover {
+  font-weight: 700;
+  color: orangered;
+}
+
+#naver:active{
+  font-weight: 700;
+  color: palevioletred;
+}
+
+#daum:visited{
+  color: gray;
+}
+
+/* 
+복합 선택자
+ABC:first-child : 첫번째 자식 요소일때만 적용
+*/
+
+/* .fruits span:first-child {
+  color: red;
+}
+
+.fruits h3:last-child {
+  color: hotpink;
+} */
+
+/* 괄호 안에 공식 입력해서 여러 개 선택 가능 */
+/* .fruits *:nth-child(2n){
+  color: orange;
+} */
+
+/* 
+.fruits *:not(span) {
+  color: blue;
+}
+
+.numbers span:nth-child(even) {
+  color:aquamarine
+}
+
+.numbers span:nth-child(odd) {
+  color: orange;
+} */
+
+/* 4와 7에만 파란색상이 되도록 만들기 */
+.numbers span:nth-child(3n+4) {
+  color:blue;
+}
+
+/* 전체 선택자 */
+.test * {
+  font-size: 30px;
+  color: gray;
+}
+
+/* 태그 선택자 > 전체 선택자 */
+.test span {
+  color: blue !important;
+}
+
+/* 클래스 선택자 > 태그 선택자 */
+.test .num {
+  color: green;
+}
+
+/* 아이디 선택자 > 클래스 선택자 */
+.test #two {
+  color: purple;
+}
+
+/* 인라인 스타일 > 아이디 선택자 */
+
+/* !important >>>>>> *  */
